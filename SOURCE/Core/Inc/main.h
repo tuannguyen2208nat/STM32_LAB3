@@ -63,6 +63,12 @@ void Error_Handler(void);
 #define led_green1_GPIO_Port GPIOA
 #define led_yellow1_Pin GPIO_PIN_2
 #define led_yellow1_GPIO_Port GPIOA
+#define led_red2_Pin GPIO_PIN_3
+#define led_red2_GPIO_Port GPIOA
+#define led_green2_Pin GPIO_PIN_4
+#define led_green2_GPIO_Port GPIOA
+#define led_yellow2_Pin GPIO_PIN_5
+#define led_yellow2_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

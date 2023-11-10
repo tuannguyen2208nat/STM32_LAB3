@@ -7,37 +7,8 @@
 
 #include "fsm_auto.h"
 
-int duration;
-
-void turn_off()
-{
-	HAL_GPIO_WritePin(led_red1_GPIO_Port, led_red1_Pin, SET);
-	HAL_GPIO_WritePin(led_green1_GPIO_Port, led_green1_Pin, SET);
-	HAL_GPIO_WritePin(led_yellow1_GPIO_Port, led_yellow1_Pin, SET);
-}
-
-void turn_on(int index)
-{
-	switch (index)
-	{
-	case 0 :
-		HAL_GPIO_WritePin(led_red1_GPIO_Port, led_red1_Pin, RESET);
-		HAL_GPIO_WritePin(led_green1_GPIO_Port, led_green1_Pin, SET);
-		HAL_GPIO_WritePin(led_yellow1_GPIO_Port, led_yellow1_Pin, SET);
-		break ;
-	case 1 :
-		HAL_GPIO_WritePin(led_red1_GPIO_Port, led_red1_Pin, SET);
-		HAL_GPIO_WritePin(led_green1_GPIO_Port, led_green1_Pin, RESET);
-		HAL_GPIO_WritePin(led_yellow1_GPIO_Port, led_yellow1_Pin, SET);
-		break;
-	case 2 :
-		HAL_GPIO_WritePin(led_red1_GPIO_Port, led_red1_Pin, SET);
-		HAL_GPIO_WritePin(led_green1_GPIO_Port, led_green1_Pin, SET);
-		HAL_GPIO_WritePin(led_yellow1_GPIO_Port, led_yellow1_Pin, RESET);
-		break ;
-	default : break;
-	}
-}
+int duration =0 ;
+int duration2 =0 ;
 
 void fsm_run()
 {
@@ -78,5 +49,45 @@ void fsm_run()
 		break;
 	default :  break;
 	}
+}
 
+void fsm_run2()
+{
+	switch(status2)
+	{
+	case INIT :
+		turn_off();
+		status2=auto_green;
+		duration2=timer2;
+		settimer2(duration2);
+		break;
+	case auto_red:
+		turn_on2(0);
+		if(timer2_flag==1)
+		{
+			status2=auto_green;
+			duration2=timer2;
+			settimer2(duration2);
+		}
+		break;
+	case auto_green :
+		turn_on2(1);
+		if(timer2_flag==1)
+		{
+			status2=auto_yellow;
+			duration2=timer3;
+			settimer2(duration2);
+		}
+		break;
+	case auto_yellow :
+		turn_on2(2);
+		if(timer2_flag==1)
+		{
+			status2=auto_red;
+			duration2=timer1;
+			settimer2(duration2);
+		}
+		break;
+	default :  break;
+	}
 }

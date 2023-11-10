@@ -7,6 +7,7 @@
 #include "global.h"
 
 int status1=0;
+int status2=0;
 
 int timer1=500;
 int timer2=300;

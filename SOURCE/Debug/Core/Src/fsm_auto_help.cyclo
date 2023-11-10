@@ -1,0 +1,3 @@
+../Core/Src/fsm_auto_help.c:10:6:turn_off	1
+../Core/Src/fsm_auto_help.c:20:6:turn_on	5
+../Core/Src/fsm_auto_help.c:43:6:turn_on2	5

@@ -1,0 +1,3 @@
+../Core/Src/fsm_auto_help.c:10:6:turn_off	8	static
+../Core/Src/fsm_auto_help.c:20:6:turn_on	16	static
+../Core/Src/fsm_auto_help.c:43:6:turn_on2	16	static

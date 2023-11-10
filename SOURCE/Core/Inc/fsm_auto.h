@@ -8,9 +8,9 @@
 #ifndef INC_FSM_AUTO_H_
 #define INC_FSM_AUTO_H_
 
-#include "global.h"
-#include "software_timer.h"
+#include "fsm_auto_help.h"
 
 void fsm_run();
+void fsm_run2();
 
 #endif /* INC_FSM_AUTO_H_ */

@@ -1,4 +1,5 @@
 "./Core/Src/fsm_auto.o"
+"./Core/Src/fsm_auto_help.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"
 "./Core/Src/software_timer.o"

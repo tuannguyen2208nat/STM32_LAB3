@@ -9,6 +9,7 @@
 #define INC_GLOBAL_H_
 
 #include "main.h"
+#include "software_timer.h"
 
 #define INIT 0
 #define auto_red 1
@@ -16,6 +17,8 @@
 #define auto_yellow 3
 
 extern int status1;
+extern int status2;
+
 extern int timer1;
 extern int timer2;
 extern int timer3;
