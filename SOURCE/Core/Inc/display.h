@@ -12,8 +12,7 @@
 #include "global.h"
 
 void update7SEGa ( int index );
-void update7SEGb ( int index );
 void display7SEGa (int index);
-void display7SEGb (int index);
+
 
 #endif /* INC_DISPLAY_H_ */

@@ -6,9 +6,12 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/display.c \
+../Core/Src/display2.c \
 ../Core/Src/fsm_auto.c \
 ../Core/Src/fsm_auto_help.c \
 ../Core/Src/global.c \
+../Core/Src/input_processing.c \
+../Core/Src/input_reading.c \
 ../Core/Src/main.c \
 ../Core/Src/software_timer.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -16,13 +19,17 @@ C_SRCS += \
 ../Core/Src/syscalls.c \
 ../Core/Src/sysmem.c \
 ../Core/Src/system_stm32f1xx.c \
-../Core/Src/traffic_light_display.c 
+../Core/Src/traffic_light_display.c \
+../Core/Src/traffic_light_display2.c 
 
 OBJS += \
 ./Core/Src/display.o \
+./Core/Src/display2.o \
 ./Core/Src/fsm_auto.o \
 ./Core/Src/fsm_auto_help.o \
 ./Core/Src/global.o \
+./Core/Src/input_processing.o \
+./Core/Src/input_reading.o \
 ./Core/Src/main.o \
 ./Core/Src/software_timer.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -30,13 +37,17 @@ OBJS += \
 ./Core/Src/syscalls.o \
 ./Core/Src/sysmem.o \
 ./Core/Src/system_stm32f1xx.o \
-./Core/Src/traffic_light_display.o 
+./Core/Src/traffic_light_display.o \
+./Core/Src/traffic_light_display2.o 
 
 C_DEPS += \
 ./Core/Src/display.d \
+./Core/Src/display2.d \
 ./Core/Src/fsm_auto.d \
 ./Core/Src/fsm_auto_help.d \
 ./Core/Src/global.d \
+./Core/Src/input_processing.d \
+./Core/Src/input_reading.d \
 ./Core/Src/main.d \
 ./Core/Src/software_timer.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
@@ -44,7 +55,8 @@ C_DEPS += \
 ./Core/Src/syscalls.d \
 ./Core/Src/sysmem.d \
 ./Core/Src/system_stm32f1xx.d \
-./Core/Src/traffic_light_display.d 
+./Core/Src/traffic_light_display.d \
+./Core/Src/traffic_light_display2.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -54,7 +66,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/display.cyclo ./Core/Src/display.d ./Core/Src/display.o ./Core/Src/display.su ./Core/Src/fsm_auto.cyclo ./Core/Src/fsm_auto.d ./Core/Src/fsm_auto.o ./Core/Src/fsm_auto.su ./Core/Src/fsm_auto_help.cyclo ./Core/Src/fsm_auto_help.d ./Core/Src/fsm_auto_help.o ./Core/Src/fsm_auto_help.su ./Core/Src/global.cyclo ./Core/Src/global.d ./Core/Src/global.o ./Core/Src/global.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/software_timer.cyclo ./Core/Src/software_timer.d ./Core/Src/software_timer.o ./Core/Src/software_timer.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su ./Core/Src/traffic_light_display.cyclo ./Core/Src/traffic_light_display.d ./Core/Src/traffic_light_display.o ./Core/Src/traffic_light_display.su
+	-$(RM) ./Core/Src/display.cyclo ./Core/Src/display.d ./Core/Src/display.o ./Core/Src/display.su ./Core/Src/display2.cyclo ./Core/Src/display2.d ./Core/Src/display2.o ./Core/Src/display2.su ./Core/Src/fsm_auto.cyclo ./Core/Src/fsm_auto.d ./Core/Src/fsm_auto.o ./Core/Src/fsm_auto.su ./Core/Src/fsm_auto_help.cyclo ./Core/Src/fsm_auto_help.d ./Core/Src/fsm_auto_help.o ./Core/Src/fsm_auto_help.su ./Core/Src/global.cyclo ./Core/Src/global.d ./Core/Src/global.o ./Core/Src/global.su ./Core/Src/input_processing.cyclo ./Core/Src/input_processing.d ./Core/Src/input_processing.o ./Core/Src/input_processing.su ./Core/Src/input_reading.cyclo ./Core/Src/input_reading.d ./Core/Src/input_reading.o ./Core/Src/input_reading.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/software_timer.cyclo ./Core/Src/software_timer.d ./Core/Src/software_timer.o ./Core/Src/software_timer.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su ./Core/Src/traffic_light_display.cyclo ./Core/Src/traffic_light_display.d ./Core/Src/traffic_light_display.o ./Core/Src/traffic_light_display.su ./Core/Src/traffic_light_display2.cyclo ./Core/Src/traffic_light_display2.d ./Core/Src/traffic_light_display2.o ./Core/Src/traffic_light_display2.su
 
 .PHONY: clean-Core-2f-Src
 

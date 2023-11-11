@@ -10,6 +10,6 @@
 
 #include "display.h"
 
-void display_traffic();
+void display_traffic1();
 
 #endif /* INC_TRAFFIC_LIGHT_DISPLAY_H_ */

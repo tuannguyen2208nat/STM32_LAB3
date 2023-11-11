@@ -24,6 +24,7 @@
 #include "global.h"
 #include "fsm_auto.h"
 #include "traffic_light_display.h"
+#include "traffic_light_display2.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,8 +104,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    fsm_run();
-    display_traffic();
+	fsm_run();
+    display_traffic1();
+    display_traffic2();
+    fsm_for_input_processing () ;
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -209,34 +212,43 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, led_red1_Pin|led_green1_Pin|led_yellow1_Pin|led_red2_Pin
                           |led_green2_Pin|led_yellow2_Pin|en0_Pin|en1_Pin
-                          |en2_Pin|en3_Pin|chan2f_Pin|chan2g_Pin, GPIO_PIN_RESET);
+                          |en2_Pin|en3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, chan1a_Pin|chan1b_Pin|chan1c_Pin|chan2d_Pin
-                          |chan2e_Pin|chan1d_Pin|chan1e_Pin|chan1f_Pin
-                          |chan1g_Pin|chan2a_Pin|chan2b_Pin|chan2c_Pin, GPIO_PIN_RESET);
+                          |chan2e_Pin|chan2f_Pin|chan2g_Pin|chan1d_Pin
+                          |chan1e_Pin|chan1f_Pin|chan1g_Pin|chan2a_Pin
+                          |chan2b_Pin|chan2c_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : led_red1_Pin led_green1_Pin led_yellow1_Pin led_red2_Pin
                            led_green2_Pin led_yellow2_Pin en0_Pin en1_Pin
-                           en2_Pin en3_Pin chan2f_Pin chan2g_Pin */
+                           en2_Pin en3_Pin */
   GPIO_InitStruct.Pin = led_red1_Pin|led_green1_Pin|led_yellow1_Pin|led_red2_Pin
                           |led_green2_Pin|led_yellow2_Pin|en0_Pin|en1_Pin
-                          |en2_Pin|en3_Pin|chan2f_Pin|chan2g_Pin;
+                          |en2_Pin|en3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : chan1a_Pin chan1b_Pin chan1c_Pin chan2d_Pin
-                           chan2e_Pin chan1d_Pin chan1e_Pin chan1f_Pin
-                           chan1g_Pin chan2a_Pin chan2b_Pin chan2c_Pin */
+                           chan2e_Pin chan2f_Pin chan2g_Pin chan1d_Pin
+                           chan1e_Pin chan1f_Pin chan1g_Pin chan2a_Pin
+                           chan2b_Pin chan2c_Pin */
   GPIO_InitStruct.Pin = chan1a_Pin|chan1b_Pin|chan1c_Pin|chan2d_Pin
-                          |chan2e_Pin|chan1d_Pin|chan1e_Pin|chan1f_Pin
-                          |chan1g_Pin|chan2a_Pin|chan2b_Pin|chan2c_Pin;
+                          |chan2e_Pin|chan2f_Pin|chan2g_Pin|chan1d_Pin
+                          |chan1e_Pin|chan1f_Pin|chan1g_Pin|chan2a_Pin
+                          |chan2b_Pin|chan2c_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : button1_Pin button2_Pin button3_Pin */
+  GPIO_InitStruct.Pin = button1_Pin|button2_Pin|button3_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -246,6 +258,7 @@ static void MX_GPIO_Init(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	timerrun();
+	button_reading();
 }
 /* USER CODE END 4 */
 
