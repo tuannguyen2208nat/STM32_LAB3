@@ -1,0 +1,4 @@
+../Core/Src/display.c:9:7:update7SEGa	16	static
+../Core/Src/display.c:25:7:update7SEGb	16	static
+../Core/Src/display.c:41:7:display7SEGa	16	static
+../Core/Src/display.c:113:8:display7SEGb	16	static

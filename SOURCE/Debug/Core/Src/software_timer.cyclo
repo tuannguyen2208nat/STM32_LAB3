@@ -1,3 +1,7 @@
-../Core/Src/software_timer.c:15:6:settimer1	1
-../Core/Src/software_timer.c:20:6:settimer2	1
-../Core/Src/software_timer.c:27:6:timerrun	5
+../Core/Src/software_timer.c:24:6:settimer1	1
+../Core/Src/software_timer.c:29:6:settimer2	1
+../Core/Src/software_timer.c:34:6:settimer3	1
+../Core/Src/software_timer.c:39:6:settimer4	1
+../Core/Src/software_timer.c:44:6:settimer5	1
+../Core/Src/software_timer.c:49:6:settimer6	1
+../Core/Src/software_timer.c:55:6:timerrun	13

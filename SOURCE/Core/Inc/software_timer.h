@@ -10,9 +10,17 @@
 
 extern int timer1_flag ;
 extern int timer2_flag ;
+extern int timer3_flag ;
+extern int timer4_flag ;
+extern int timer5_flag ;
+extern int timer6_flag ;
 
 void settimer1(int duration);
 void settimer2(int duration);
+void settimer3(int duration);
+void settimer4(int duration);
+void settimer5(int duration);
+void settimer6(int duration);
 void timerrun();
 
 

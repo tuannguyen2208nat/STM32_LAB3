@@ -18,6 +18,8 @@
 
 extern int status1;
 extern int status2;
+extern int status3;
+extern int status4;
 
 extern int timer1;
 extern int timer2;
