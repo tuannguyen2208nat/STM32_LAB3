@@ -88,9 +88,21 @@ void getkeyinput2()
 	settimerforchedo();
 	if(timerforled==0)
 	{
-		if(mode==2){HAL_GPIO_TogglePin(led_red2_GPIO_Port, led_red2_Pin);}
-		if(mode==3){HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);}
-		if(mode==4){HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);}
+		if(mode==2)
+		{
+			HAL_GPIO_TogglePin(led_red1_GPIO_Port, led_red1_Pin);
+			HAL_GPIO_TogglePin(led_red2_GPIO_Port, led_red2_Pin);
+		}
+		if(mode==3)
+		{
+			HAL_GPIO_TogglePin(led_green1_GPIO_Port, led_green1_Pin);
+			HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);
+		}
+		if(mode==4)
+		{
+			HAL_GPIO_TogglePin(led_yellow1_GPIO_Port, led_yellow1_Pin);
+			HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);
+		}
 		display_chedo();
 	}
 

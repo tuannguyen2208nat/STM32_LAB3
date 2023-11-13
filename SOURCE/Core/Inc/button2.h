@@ -10,6 +10,7 @@
 
 #include "button.h"
 #include "global.h"
+#include "display1.h"
 #include "display2.h"
 
 extern int timerupdate ;
