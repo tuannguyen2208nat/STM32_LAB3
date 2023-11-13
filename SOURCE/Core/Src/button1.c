@@ -20,8 +20,9 @@ int mode = 1;
 
 void checkchedo()
 {
-	if(checkco!=1)
-	{switch (count)
+	if(CHECKCO()==0)
+	{
+	switch (count)
 	{
 	case 1 :
 		update7SEGa(1);
@@ -43,6 +44,7 @@ void checkchedo()
 	}
 	}
 	mode=count;
+
 }
 
 void getkeyinput1()

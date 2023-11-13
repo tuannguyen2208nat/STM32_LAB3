@@ -6,7 +6,12 @@
  */
 #include "button.h"
 
-int checkco;
+int checkco=0;
+
+int CHECKCO()
+{
+	return checkco;
+}
 
 void getkeyinput()
 {
@@ -14,14 +19,15 @@ void getkeyinput()
 	getkeyinput3();
 	if(is_button3_press()==1)
 	{
-		if(checkco==0)
-		{checkco=1;}
-		else{checkco=0;}
+		  if(checkco==0)
+		  {checkco=1;}
+		  else if(checkco==1)
+		  {checkco=0;}
 	}
 	switch (mode)
 	{
 	case 1 :
-		if((checkco==1))
+		if(checkco==1)
 	    {
 			fsm_run();
 		    display_traffic1();
@@ -33,8 +39,12 @@ void getkeyinput()
 	    }
 		break;
 	case 2 :
-		if((checkco==1))
+		if(checkco==1)
 	    {
+			if(timerforled==0)
+			{
+				timerforled=50;
+			}
 			getkeyinput2();
 	    }
 	    if(checkco==0)
@@ -43,8 +53,12 @@ void getkeyinput()
 	    }
 		break;
 	case 3 :
-		if((checkco==1))
+		if(checkco==1)
 	    {
+			if(timerforled==0)
+			{
+				timerforled=50;
+			}
 			getkeyinput2();
 	    }
 	    if(checkco==0)
@@ -53,8 +67,12 @@ void getkeyinput()
 	    }
 		break;
 	case 4 :
-		if((checkco==1))
+		if(checkco==1)
 	    {
+			if(timerforled==0)
+			{
+			   timerforled=50;
+			}
 			getkeyinput2();
 	    }
 	    if(checkco==0)

@@ -6,9 +6,11 @@
  */
 #include "button2.h"
 
+int counter=0;
 int timerupdate = 1 ;
 int led[2]={0 , 0};
 int vitri=0;
+int timerforled=50;
 
 int keyreg20=normal_state;
 int keyreg21=normal_state;
@@ -22,22 +24,29 @@ void settimerforchedo()
 	switch (mode)
 	{
 	case 2 :
-		timer1=timerupdate ;
+		changetimer1(timerupdate*100);
 		break;
 	case 3 :
-		timer2=timerupdate ;
+		changetimer2(timerupdate*100);
 		break;
 	case 4 :
-		timer3 =timerupdate ;
+		changetimer3(timerupdate*100);
 	default : break;
 	}
-	timerupdate=1;
 }
 
 void display_chedo()
 {
-	update7SEGb(1);
-	display7SEGb(led[1]);
+	update7SEGb(counter);
+	display7SEGb(led[counter]);
+	if(counter==0)
+	{
+		counter=1;
+	}
+	else if(counter==1)
+	{
+		counter=0;
+	}
 }
 
 void updateclockbuffer()
@@ -63,7 +72,6 @@ void getkeyinput2()
 				timerupdate++;
 				if(timerupdate>99){timerupdate=1;}
 				timercountdown2=200;
-				display_chedo();
 			}
 		}
 		else
@@ -75,8 +83,13 @@ void getkeyinput2()
 			}
 		}
 	}
+	timerforled--;
 	updateclockbuffer();
-
+	settimerforchedo();
+	if(timerforled==0)
+	{
+		display_chedo();
+	}
 
 }
 

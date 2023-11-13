@@ -14,3 +14,18 @@ int status4=0;
 int timer1=500;
 int timer2=300;
 int timer3=200;
+
+void changetimer1(int duration)
+{
+	timer1=duration;
+}
+
+void changetimer2(int duration)
+{
+	timer2=duration;
+}
+
+void changetimer3(int duration)
+{
+	timer3=duration;
+}

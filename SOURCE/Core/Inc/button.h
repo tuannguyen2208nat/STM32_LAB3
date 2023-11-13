@@ -20,5 +20,5 @@
 #define pressed_state GPIO_PIN_RESET
 
 void getkeyinput();
-extern int checkco;
+int CHECKCO();
 #endif /* INC_BUTTON_H_ */

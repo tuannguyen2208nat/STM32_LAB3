@@ -25,4 +25,8 @@ extern int timer1;
 extern int timer2;
 extern int timer3;
 
+void changetimer1(int duration);
+void changetimer2(int duration);
+void changetimer3(int duration);
+
 #endif /* INC_GLOBAL_H_ */

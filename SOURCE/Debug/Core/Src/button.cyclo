@@ -1,1 +1,2 @@
-../Core/Src/button.c:11:6:getkeyinput	15
+../Core/Src/button.c:11:5:CHECKCO	1
+../Core/Src/button.c:16:6:getkeyinput	19

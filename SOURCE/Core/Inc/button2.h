@@ -9,9 +9,11 @@
 #define INC_BUTTON2_H_
 
 #include "button.h"
+#include "global.h"
 #include "display2.h"
 
 extern int timerupdate ;
+extern int timerforled;
 void getkeyinput2();
 
 #endif /* INC_BUTTON2_H_ */
