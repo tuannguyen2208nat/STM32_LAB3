@@ -1,5 +1,4 @@
-Core/Src/traffic_light_display.o: ../Core/Src/traffic_light_display.c \
- ../Core/Inc/traffic_light_display.h ../Core/Inc/display.h \
+Core/Src/display1.o: ../Core/Src/display1.c ../Core/Inc/display1.h \
  ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -25,8 +24,7 @@ Core/Src/traffic_light_display.o: ../Core/Src/traffic_light_display.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/global.h ../Core/Inc/software_timer.h
-../Core/Inc/traffic_light_display.h:
-../Core/Inc/display.h:
+../Core/Inc/display1.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:

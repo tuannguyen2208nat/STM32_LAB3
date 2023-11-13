@@ -1,12 +1,11 @@
 /*
- * traffic_light_display.c
+ * traffic_light_display1.c
  *
- *  Created on: Nov 11, 2023
+ *  Created on: Nov 12, 2023
  *      Author: tuann
  */
 
-
-#include "traffic_light_display.h"
+#include "traffic_light_display1.h"
 
 int second=0;
 int index_led=0;
@@ -116,4 +115,3 @@ void display_traffic1()
 	default : break ;
 	}
 }
-

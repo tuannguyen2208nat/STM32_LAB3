@@ -121,4 +121,3 @@ void display7SEGb(int index)
    	default : break;
    	}
    }
-

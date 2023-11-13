@@ -17,7 +17,7 @@ void fsm_run1()
 	case INIT :
 		turn_off();
 		status1=auto_red;
-		duration=timer1+50;
+		duration=timer1;
 		settimer1(duration);
 		break;
 	case auto_red:
@@ -25,7 +25,7 @@ void fsm_run1()
 		if(timer1_flag==1)
 		{
 			status1=auto_green;
-			duration=timer2+50;
+			duration=timer2;
 			settimer1(duration);
 		}
 		break;
@@ -34,7 +34,7 @@ void fsm_run1()
 		if(timer1_flag==1)
 		{
 			status1=auto_yellow;
-			duration=timer3+50;
+			duration=timer3;
 			settimer1(duration);
 		}
 		break;
@@ -43,7 +43,7 @@ void fsm_run1()
 		if(timer1_flag==1)
 		{
 			status1=auto_red;
-			duration=timer1+50;
+			duration=timer1;
 			settimer1(duration);
 		}
 		break;
@@ -58,7 +58,7 @@ void fsm_run2()
 	case INIT :
 		turn_off();
 		status2=auto_green;
-		duration2=timer2+50;
+		duration2=timer2;
 		settimer2(duration2);
 		break;
 	case auto_red:
@@ -66,7 +66,7 @@ void fsm_run2()
 		if(timer2_flag==1)
 		{
 			status2=auto_green;
-			duration2=timer2+50;
+			duration2=timer2;
 			settimer2(duration2);
 		}
 		break;
@@ -75,7 +75,7 @@ void fsm_run2()
 		if(timer2_flag==1)
 		{
 			status2=auto_yellow;
-			duration2=timer3+50;
+			duration2=timer3;
 			settimer2(duration2);
 		}
 		break;
@@ -84,7 +84,7 @@ void fsm_run2()
 		if(timer2_flag==1)
 		{
 			status2=auto_red;
-			duration2=timer1+50;
+			duration2=timer1;
 			settimer2(duration2);
 		}
 		break;
@@ -97,4 +97,7 @@ void fsm_run()
 	fsm_run1();
 	fsm_run2();
 }
-
+void fsm_off()
+{
+	turn_off();
+}

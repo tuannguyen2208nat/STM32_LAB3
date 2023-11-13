@@ -1,0 +1,2 @@
+../Core/Src/button3.c:19:5:is_button3_press	4	static
+../Core/Src/button3.c:29:6:getkeyinput3	8	static

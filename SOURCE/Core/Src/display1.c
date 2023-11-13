@@ -4,7 +4,7 @@
  *  Created on: Nov 11, 2023
  *      Author: tuann
  */
-#include "display.h"
+#include "display1.h"
 
  void update7SEGa ( int index )
   {

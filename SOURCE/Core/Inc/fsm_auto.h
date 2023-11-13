@@ -11,5 +11,6 @@
 #include "fsm_auto_help.h"
 
 void fsm_run();
+void fsm_off();
 
 #endif /* INC_FSM_AUTO_H_ */

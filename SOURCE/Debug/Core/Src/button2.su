@@ -1,0 +1,4 @@
+../Core/Src/button2.c:20:6:settimerforchedo	4	static
+../Core/Src/button2.c:37:6:display_chedo	8	static
+../Core/Src/button2.c:43:6:updateclockbuffer	4	static
+../Core/Src/button2.c:50:6:getkeyinput2	8	static
