@@ -22,7 +22,10 @@ void getkeyinput()
 		  if(checkco==0)
 		  {checkco=1;}
 		  else if(checkco==1)
-		  {checkco=0;}
+		  {
+		  checkco=0;
+		  timerupdate=1;
+		  }
 	}
 	switch (mode)
 	{
