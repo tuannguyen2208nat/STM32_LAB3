@@ -1,4 +1,4 @@
 ../Core/Src/button2.c:22:6:settimerforchedo	5
 ../Core/Src/button2.c:38:6:display_chedo	3
 ../Core/Src/button2.c:52:6:updateclockbuffer	1
-../Core/Src/button2.c:59:6:getkeyinput2	8
+../Core/Src/button2.c:59:6:getkeyinput2	11
