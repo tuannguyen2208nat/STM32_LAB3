@@ -523,10 +523,10 @@ void settimerforchedo()
  80003d8:	2b03      	cmp	r3, #3
  80003da:	d009      	beq.n	80003f0 <settimerforchedo+0x2c>
 	case 3 :
-		changetimer2(timerupdate*100);
+		changetimer3(timerupdate*100);
 		break;
 	case 4 :
-		changetimer3(timerupdate*100);
+		changetimer2(timerupdate*100);
 	default : break;
  80003dc:	e019      	b.n	8000412 <settimerforchedo+0x4e>
 		changetimer1(timerupdate*100);
@@ -538,22 +538,22 @@ void settimerforchedo()
  80003ea:	f000 feb1 	bl	8001150 <changetimer1>
 		break;
  80003ee:	e011      	b.n	8000414 <settimerforchedo+0x50>
-		changetimer2(timerupdate*100);
+		changetimer3(timerupdate*100);
  80003f0:	4b0a      	ldr	r3, [pc, #40]	; (800041c <settimerforchedo+0x58>)
  80003f2:	681b      	ldr	r3, [r3, #0]
  80003f4:	2264      	movs	r2, #100	; 0x64
  80003f6:	fb02 f303 	mul.w	r3, r2, r3
  80003fa:	4618      	mov	r0, r3
- 80003fc:	f000 feb6 	bl	800116c <changetimer2>
+ 80003fc:	f000 fec4 	bl	8001188 <changetimer3>
 		break;
  8000400:	e008      	b.n	8000414 <settimerforchedo+0x50>
-		changetimer3(timerupdate*100);
+		changetimer2(timerupdate*100);
  8000402:	4b06      	ldr	r3, [pc, #24]	; (800041c <settimerforchedo+0x58>)
  8000404:	681b      	ldr	r3, [r3, #0]
  8000406:	2264      	movs	r2, #100	; 0x64
  8000408:	fb02 f303 	mul.w	r3, r2, r3
  800040c:	4618      	mov	r0, r3
- 800040e:	f000 febb 	bl	8001188 <changetimer3>
+ 800040e:	f000 fead 	bl	800116c <changetimer2>
 	default : break;
  8000412:	bf00      	nop
 	}
@@ -792,12 +792,12 @@ void getkeyinput2()
  800057c:	2b03      	cmp	r3, #3
  800057e:	d107      	bne.n	8000590 <getkeyinput2+0xdc>
 		{
-			HAL_GPIO_TogglePin(led_green1_GPIO_Port, led_green1_Pin);
- 8000580:	2102      	movs	r1, #2
+			HAL_GPIO_TogglePin(led_yellow1_GPIO_Port, led_yellow1_Pin);
+ 8000580:	2104      	movs	r1, #4
  8000582:	4814      	ldr	r0, [pc, #80]	; (80005d4 <getkeyinput2+0x120>)
  8000584:	f001 fe6f 	bl	8002266 <HAL_GPIO_TogglePin>
-			HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);
- 8000588:	2110      	movs	r1, #16
+			HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);
+ 8000588:	2120      	movs	r1, #32
  800058a:	4812      	ldr	r0, [pc, #72]	; (80005d4 <getkeyinput2+0x120>)
  800058c:	f001 fe6b 	bl	8002266 <HAL_GPIO_TogglePin>
 		}
@@ -807,12 +807,12 @@ void getkeyinput2()
  8000594:	2b04      	cmp	r3, #4
  8000596:	d107      	bne.n	80005a8 <getkeyinput2+0xf4>
 		{
-			HAL_GPIO_TogglePin(led_yellow1_GPIO_Port, led_yellow1_Pin);
- 8000598:	2104      	movs	r1, #4
+			HAL_GPIO_TogglePin(led_green1_GPIO_Port, led_green1_Pin);
+ 8000598:	2102      	movs	r1, #2
  800059a:	480e      	ldr	r0, [pc, #56]	; (80005d4 <getkeyinput2+0x120>)
  800059c:	f001 fe63 	bl	8002266 <HAL_GPIO_TogglePin>
-			HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);
- 80005a0:	2120      	movs	r1, #32
+			HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);
+ 80005a0:	2110      	movs	r1, #16
  80005a2:	480c      	ldr	r0, [pc, #48]	; (80005d4 <getkeyinput2+0x120>)
  80005a4:	f001 fe5f 	bl	8002266 <HAL_GPIO_TogglePin>
 		}

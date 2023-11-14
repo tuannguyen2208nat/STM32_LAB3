@@ -27,10 +27,10 @@ void settimerforchedo()
 		changetimer1(timerupdate*100);
 		break;
 	case 3 :
-		changetimer2(timerupdate*100);
+		changetimer3(timerupdate*100);
 		break;
 	case 4 :
-		changetimer3(timerupdate*100);
+		changetimer2(timerupdate*100);
 	default : break;
 	}
 }
@@ -95,13 +95,13 @@ void getkeyinput2()
 		}
 		if(mode==3)
 		{
-			HAL_GPIO_TogglePin(led_green1_GPIO_Port, led_green1_Pin);
-			HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);
+			HAL_GPIO_TogglePin(led_yellow1_GPIO_Port, led_yellow1_Pin);
+			HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);
 		}
 		if(mode==4)
 		{
-			HAL_GPIO_TogglePin(led_yellow1_GPIO_Port, led_yellow1_Pin);
-			HAL_GPIO_TogglePin(led_yellow2_GPIO_Port, led_yellow2_Pin);
+			HAL_GPIO_TogglePin(led_green1_GPIO_Port, led_green1_Pin);
+			HAL_GPIO_TogglePin(led_green2_GPIO_Port, led_green2_Pin);
 		}
 		display_chedo();
 	}
