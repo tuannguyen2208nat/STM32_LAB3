@@ -23,8 +23,8 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/button1.h ../Core/Inc/button.h ../Core/Inc/display1.h \
- ../Core/Inc/global.h ../Core/Inc/software_timer.h ../Core/Inc/button2.h \
+ ../Core/Inc/global.h ../Core/Inc/software_timer.h ../Core/Inc/button1.h \
+ ../Core/Inc/button.h ../Core/Inc/display1.h ../Core/Inc/button2.h \
  ../Core/Inc/display2.h ../Core/Inc/button3.h ../Core/Inc/fsm_auto.h \
  ../Core/Inc/fsm_auto_help.h ../Core/Inc/traffic_light_display1.h \
  ../Core/Inc/traffic_light_display2.h
@@ -54,11 +54,11 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+../Core/Inc/global.h:
+../Core/Inc/software_timer.h:
 ../Core/Inc/button1.h:
 ../Core/Inc/button.h:
 ../Core/Inc/display1.h:
-../Core/Inc/global.h:
-../Core/Inc/software_timer.h:
 ../Core/Inc/button2.h:
 ../Core/Inc/display2.h:
 ../Core/Inc/button3.h:

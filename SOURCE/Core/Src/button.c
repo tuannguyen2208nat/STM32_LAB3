@@ -25,6 +25,10 @@ void getkeyinput()
 		  {
 		  checkco=0;
 		  timerupdate=1;
+		  status1=INIT;
+		  status2=INIT;
+		  status3=INIT;
+		  status4=INIT;
 		  }
 	}
 	switch (mode)

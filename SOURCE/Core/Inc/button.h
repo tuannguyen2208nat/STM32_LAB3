@@ -9,6 +9,7 @@
 #define INC_BUTTON_H_
 
 #include "main.h"
+#include "global.h"
 #include "button1.h"
 #include "button2.h"
 #include "button3.h"
