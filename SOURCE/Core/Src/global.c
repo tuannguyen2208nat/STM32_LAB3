@@ -11,9 +11,9 @@ int status2=0;
 int status3=0;
 int status4=0;
 
-int timer1=500;
-int timer2=300;
-int timer3=200;
+int timer1=0;
+int timer2=0;
+int timer3=0;
 
 void changetimer1(int duration)
 {
